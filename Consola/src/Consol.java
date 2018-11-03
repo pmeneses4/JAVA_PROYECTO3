@@ -1352,7 +1352,7 @@ public class Consol extends javax.swing.JFrame {
         System.out.println(texto);
         try{
             //Socket parar = new Socket("192.168.1.10",9998);
-            Socket paquete_enviar = new Socket("192.168.1.9",9999);
+            Socket paquete_enviar = new Socket("192.168.56.1",9999);
 
             
             //PrintStream salida = new PrintStream(parar.getOutputStream());
@@ -1386,7 +1386,7 @@ public class Consol extends javax.swing.JFrame {
     private void btnStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStopActionPerformed
         try {
             // TODO add your handling code here:
-            Socket paquete_enviar = new Socket("192.168.1.10",9998);
+            Socket paquete_enviar = new Socket("192.168.56.1",9998);
             ObjectOutputStream paquete_salida = new ObjectOutputStream(paquete_enviar.getOutputStream());
             paquete_salida.writeObject(new Detenerc());
             paquete_enviar.close();
